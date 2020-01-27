@@ -7,9 +7,15 @@
     tools:context=".MainActivity"
     android:background="#fffff">
 
+    <fragment
+        android:id="@+id/fragmentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
     <androidx.cardview.widget.CardView
         android:layout_width="202dp"
         android:layout_height="61dp"
+        android:visibility="gone"
         app:cardCornerRadius="32dp"
         app:cardElevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
