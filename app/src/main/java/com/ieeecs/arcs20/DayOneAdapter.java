@@ -1,4 +1,4 @@
-package com.example.arcs20;
+package com.ieeecs.arcs20;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,21 +13,21 @@ import androidx.annotation.Nullable;
 
 import java.util.List;
 
-public class DayTwoAdapter extends ArrayAdapter<TimelineDataModel> {
-    List<TimelineDataModel> myList2;
+public class DayOneAdapter extends ArrayAdapter<TimelineDataModel> {
+
+    List<TimelineDataModel> myList;
     Context context;
     int resource;
 
-    public DayTwoAdapter(Context context, int resource, List<TimelineDataModel> myList2) {
-        super(context, resource, myList2);
+    public DayOneAdapter(Context context, int resource, List<TimelineDataModel> myList) {
+        super(context, resource, myList);
         this.context = context;
         this.resource = resource;
-        this.myList2 = myList2;
+        this.myList = myList;
     }
 
 
     @NonNull
-    @Override
     public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
         //we need to get the view of the xml for our list item
@@ -43,14 +43,17 @@ public class DayTwoAdapter extends ArrayAdapter<TimelineDataModel> {
         TextView tx2 = view.findViewById(R.id.d1_textView2);
         TextView tx3 = view.findViewById(R.id.d1_textView);
 
-        TimelineDataModel timelineDataModel=myList2.get(position);
+        TimelineDataModel timelineDataModel = myList.get(position);
 
         img.setImageDrawable(context.getResources().getDrawable(timelineDataModel.getImage()));
         tx1.setText(timelineDataModel.getEta());
         tx2.setText(timelineDataModel.getVenue());
         tx3.setText(timelineDataModel.getEvent());
 
+
         return view;
 
     }
+
+
 }

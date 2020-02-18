@@ -1,4 +1,4 @@
-package com.example.arcs20;
+package com.ieeecs.arcs20;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import androidx.fragment.app.Fragment;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,10 +41,9 @@ public class FragmentTimeLine extends Fragment {
 
 
         DayOneAdapter adapter = new DayOneAdapter(getActivity(), R.layout.day_one_adapter, timelineList);
-        DayTwoAdapter adapter1 = new DayTwoAdapter(getActivity(), R.layout.day_one_adapter, timelineList1);
 
         listView1.setAdapter(adapter);
-        listView2.setAdapter(adapter1);
+        listView2.setAdapter(adapter);
         listView3.setAdapter(adapter);
 
 

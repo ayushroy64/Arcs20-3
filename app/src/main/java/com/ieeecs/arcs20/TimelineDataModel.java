@@ -1,4 +1,4 @@
-package com.example.arcs20;
+package com.ieeecs.arcs20;
 
 public class TimelineDataModel {
 
