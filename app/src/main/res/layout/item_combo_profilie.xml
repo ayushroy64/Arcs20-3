@@ -29,7 +29,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="3dp"
                 android:text="Combo 1"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 tools:ignore="NotSibling" />
 
@@ -50,6 +50,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="20dp"
                 android:text="Convoke"
+                android:textSize="14sp"
                 card_view:fontFamily="@font/roboto" />
 
             <TextView
@@ -62,6 +63,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="44dp"
                 android:text="ML,CYBER"
+                android:textSize="14sp"
                 card_view:fontFamily="@font/roboto" />
 
             <View
@@ -82,7 +84,8 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="60dp"
                 android:layout_marginBottom="7dp"
-                android:text="Total"
+                android:text="@string/tot"
+                android:textSize="14sp"
                 card_view:fontFamily="@font/roboto" />
             <TextView
                 android:id="@+id/TOTALval"
@@ -96,9 +99,12 @@
                 android:layout_marginBottom="7dp"
                 android:layout_marginRight="10dp"
                 android:text="$24"
+                android:textSize="14sp"
                 card_view:fontFamily="@font/roboto" />
 
             <TextView
+                android:textSize="14sp"
+
                 android:id="@+id/EVENT1val"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -120,6 +126,7 @@
                 android:layout_below="@id/EVENT1"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="15dp"
+                android:textSize="14sp"
                 android:text="$16" />
 
 

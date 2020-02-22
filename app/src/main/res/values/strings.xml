@@ -8,6 +8,8 @@
     <string name="hello_blank_fragment">Hello convoke fragment</string>
 
     <string name="nxt">ARCS</string>
-
+    <string name="REGISTERED">REGISTERED</string>
+    <string name="tot">TOTAL</string>
     <string name="lvl">20</string>
+    <string name="registered">REGISTERED</string>
 </resources>
