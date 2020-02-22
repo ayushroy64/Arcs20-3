@@ -2,8 +2,10 @@ package com.ieeecs.arcs20;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -28,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
 
         button = findViewById(R.id.drawer_button);
-
+        button.setImageResource(R.drawable.ic_sort);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,22 +59,32 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_Home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new HomeFragment()).commit();
+                button.setImageResource(R.drawable.ic_sort);
                 break;
             case R.id.nav_workshop:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new WorkshopFragment()).commit();
+                button.setImageResource(R.drawable.ic_sort_white);
                 break;
             case R.id.nav_hackbattle:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new hackbattleFragment()).commit();
+                button.setImageResource(R.drawable.ic_sort_white);
                 break;
             case R.id.nav_timeline:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new TimelineFragment()).commit();
+                button.setImageResource(R.drawable.ic_sort);
                 break;
             case R.id.nav_developers:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new DevelopersFragment()).commit();
+                button.setImageResource(R.drawable.ic_sort);
+                break;
+            case R.id.nav_profile:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new ProfileFragment()).commit();
+                button.setImageResource(R.drawable.ic_sort_white);
+
                 break;
         }
 

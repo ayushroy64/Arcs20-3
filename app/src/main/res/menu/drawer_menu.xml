@@ -20,7 +20,9 @@
             android:title="Timeline"/>
 
         <item android:id="@+id/nav_developers"
-            android:title="Devvelopers"/>
+            android:title="Developers"/>
+        <item android:id="@+id/nav_profile"
+            android:title="Profile"/>
 
     </group>
 
