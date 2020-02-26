@@ -19,25 +19,6 @@
         app:layout_constraintVertical_bias="0.0" />
 
 
-    <TextView
-        android:id="@+id/lvl"
-        android:layout_width="47.25dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="8.75dp"
-        android:layout_marginRight="8.75dp"
-        android:fontFamily="@font/poppins_blackitalic"
-        android:gravity="top"
-        android:letterSpacing="-0.06"
-        android:shadowColor="#80000000"
-        android:shadowDx="-3"
-        android:shadowDy="0"
-        android:shadowRadius="8"
-        android:text="@string/lvl"
-        android:textColor="#ffffffff"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/mask"
@@ -50,36 +31,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/arcslogo" />
 
-
-    <TextView
-        android:id="@+id/nxt"
-        android:layout_width="77.44dp"
-        android:layout_height="33dp"
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/arcs"
+        app:layout_constraintTop_toTopOf="@id/arcslogo"
+        app:layout_constraintEnd_toEndOf="@id/arcslogo"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="11.56dp"
-        android:layout_marginRight="11.56dp"
-        android:fontFamily="@font/poppins_blackitalic"
-        android:letterSpacing="-0.06"
-        android:shadowColor="#80000000"
-        android:shadowDx="0"
-        android:shadowDy="4"
-        android:shadowRadius="4"
-        android:text="@string/nxt"
-        android:textColor="#ffffff"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginRight="11.56dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/a20"
+        app:layout_constraintEnd_toEndOf="@id/arcslogo"
+        app:layout_constraintTop_toTopOf="@id/arcslogo"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="11dp"/>
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/proffimg"
         android:layout_width="95dp"
         android:layout_height="95dp"
-        android:src="@mipmap/ic_launcher"
-        android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
         android:layout_marginTop="100dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        android:src="@mipmap/ic_launcher"
         app:layout_constraintEnd_toEndOf="@id/mask"
-        app:layout_constraintTop_toTopOf="@id/mask"/>
+        app:layout_constraintTop_toTopOf="@id/mask" />
 
     <TextView
         android:id="@+id/Name_bold"
