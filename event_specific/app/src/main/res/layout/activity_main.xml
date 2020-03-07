@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/arcslogo"
+        android:layout_width="match_parent"
+        android:layout_height="347dp"
+        android:background="@drawable/bitmap"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+    <!-- ↳ Placeholder Label Copy 11 -->
+
+
+    <View
+        android:id="@+id/mask"
+        android:layout_width="match_parent"
+        android:layout_height="347dp"
+        android:background="@drawable/ic_mask"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/arcslogo"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/Workshop_name"
+        android:layout_width="218dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="right|top"
+        android:text="Machine Learning"
+        android:textColor="#494949"
+        android:textSize="40dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/placeholder"
+        app:layout_constraintEnd_toEndOf="@+id/mask"
+        app:layout_constraintStart_toStartOf="@+id/register"
+        app:layout_constraintTop_toTopOf="@+id/mask"
+        app:layout_constraintVertical_bias="0.64" />
+
+    <TextView
+        android:id="@+id/Venue"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="2dp"
+        android:gravity="right|top"
+        android:text="SJT 707 , 19:30 PM"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@id/placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/register"
+        app:layout_constraintTop_toBottomOf="@id/Workshop_name" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="150dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="97dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/register_button"
+        android:fontFamily="sans-serif"
+        android:letterSpacing="0.0"
+        android:lineHeight="20dp"
+        android:text="Register"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@id/placeholder"
+        app:layout_constraintEnd_toStartOf="@+id/Workshop_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/mask"
+        app:layout_constraintTop_toTopOf="@id/mask"
+        app:layout_constraintVertical_bias="0.7"></Button>
+    <TextView
+        android:id="@+id/placeholder"
+        android:layout_width="327dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="3sp"
+        android:text="@string/placeholder"
+        android:textAppearance="@style/placeholder"
+        app:layout_constraintBottom_toTopOf="@id/recyclerview1"
+        app:layout_constraintEnd_toEndOf="@id/mask"
+        app:layout_constraintStart_toStartOf="@id/mask"
+        app:layout_constraintTop_toBottomOf="@id/Workshop_name" />
+
+    <TextView
+        android:id="@+id/Speaker"
+        android:layout_width="327dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/Speaker"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal"
+        android:scrollbars="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/placeholder" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/ellipse"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recyclerview1"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <TextView
+        android:id="@+id/arcs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="277dp"
+        android:background="@drawable/ic_nxt"
+        app:layout_constraintBottom_toBottomOf="@+id/mask"
+        app:layout_constraintEnd_toEndOf="@+id/mask"
+        app:layout_constraintHorizontal_bias="0.993"
+        app:layout_constraintStart_toStartOf="@+id/mask"
+        app:layout_constraintTop_toTopOf="@+id/mask"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/twenty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/ic_lvl"
+        app:layout_constraintBottom_toTopOf="@+id/Workshop_name"
+        app:layout_constraintEnd_toEndOf="@id/mask"
+        app:layout_constraintHorizontal_bias="0.994"
+        app:layout_constraintStart_toStartOf="@id/mask"
+        app:layout_constraintTop_toTopOf="@id/arcs"
+        app:layout_constraintVertical_bias="0.115" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

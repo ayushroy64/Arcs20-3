@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">event_specific</string>
+    <string name="k">Machine Learning</string>
+    <string name="placeholder">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s
+        </string>
+    <string name="photos">SJT 204,19:00HRS</string>
+    <string name="Speaker">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+    <string name="nxt">ARCS</string>
+</resources>
