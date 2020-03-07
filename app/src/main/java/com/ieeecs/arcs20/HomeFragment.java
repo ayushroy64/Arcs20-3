@@ -97,7 +97,7 @@ public class HomeFragment extends Fragment {
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(),FragmentLogin.class);
+                Intent intent=new Intent(getActivity(),LoginActivity.class);
                 startActivity(intent);
                 getActivity().finish();
             }

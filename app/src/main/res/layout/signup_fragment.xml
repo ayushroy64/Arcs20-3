@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/background_arcs"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/mask"
+        android:scaleType="centerCrop"/>
+
+    <View
+        android:id="@+id/background_image_tint"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/gradient_concoke"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/mask"
+        android:scaleType="centerCrop"/>
+
+   <ImageView
+       android:id="@+id/logo"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:src="@drawable/arcs_20_logo_main"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       android:layout_marginTop="40dp"
+       android:layout_marginStart="20dp"/>
+
+    <View
+        android:id="@+id/mask"
+        android:layout_width="match_parent"
+        android:layout_height="318dp"
+        android:background="@drawable/ic_mask"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="wrap_content"
+        android:layout_height="63dp"
+        android:fontFamily="@font/poppins_extrabold"
+        android:text="SIGNUP "
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/mask"
+        android:layout_marginTop="150dp"
+        android:textAppearance="@style/login"
+        android:textSize="45sp"
+        android:textStyle="italic"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/signup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingTop="10dp"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/phone_number"
+                android:fontFamily="@font/poppins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableEnd="@drawable/ic_local_phone_black_24dp"
+                android:hint="PHONE"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/black"
+                android:paddingBottom="10dp"
+                android:textSize="14sp"
+                android:inputType="phone"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:id="@+id/name"
+                android:fontFamily="@font/poppins"
+                android:background="@drawable/edit_text_background"
+                android:drawableEnd="@drawable/ic_person_outline_black_24dp"
+                android:hint="NAME"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textColor="@color/black"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textSize="14sp"
+                android:inputType="text"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GENDER"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <RadioGroup
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="0dp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/purplePrimary"/>
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="0dp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:textColor="@color/black"
+                    android:buttonTint="@color/purplePrimary"/>
+
+                <RadioButton
+                    android:id="@+id/others"
+                    android:fontFamily="@font/poppins"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Other"
+                    android:textColor="@color/black"
+                    android:buttonTint="@color/purplePrimary"/>
+
+            </RadioGroup>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/email_id"
+                android:fontFamily="@font/poppins"
+                android:background="@drawable/edit_text_background"
+                android:drawableEnd="@drawable/ic_person_outline_black_24dp"
+                android:hint="EMAIL"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textColor="@color/black"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textSize="14sp"
+                android:inputType="text"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:drawableEnd="@drawable/ic_lock_outline_black_24dp"
+                android:id="@+id/password"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins"
+                android:drawablePadding="10dp"
+                android:hint="PASSWORD"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:paddingStart="20dp"
+                android:textColor="@color/black"
+                android:paddingEnd="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:inputType="textPassword"/>
+
+            <EditText
+                android:id="@+id/confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableEnd="@drawable/ic_lock_outline_black_24dp"
+                android:textSize="14sp"
+                android:drawablePadding="10dp"
+                android:hint="CONFIRM PASSWORD"
+                android:layout_marginBottom="10dp"
+                android:paddingStart="20dp"
+                android:textColor="@color/black"
+                android:paddingEnd="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:inputType="textPassword"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="T-Shirt SIZE"
+                    android:textColor="@color/black"/>
+
+                <Spinner
+                    android:id="@+id/t_shirt_size"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:popupBackground="@color/colorPrimary"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/edit_text_background">
+
+                </Spinner>
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/member"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="IEEE Member"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:buttonTint="@color/purplePrimary"/>
+
+            <LinearLayout
+                android:id="@+id/membership_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:id="@+id/membership_number"
+                    android:fontFamily="@font/poppins"
+                    android:background="@drawable/edit_text_background"
+                    android:drawableEnd="@drawable/ic_person_outline_black_24dp"
+                    android:hint="MEMBERSHIP NO."
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="20dp"
+                    android:textColor="@color/black"
+                    android:paddingEnd="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="14sp"
+                    android:inputType="number"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:id="@+id/section"
+                    android:fontFamily="@font/poppins"
+                    android:background="@drawable/edit_text_background"
+                    android:drawableEnd="@drawable/ic_location_on_black_24dp"
+                    android:hint="IEEE SECTION"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="20dp"
+                    android:textColor="@color/black"
+                    android:paddingEnd="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="14sp"
+                    android:inputType="text"/>
+
+
+            </LinearLayout>
+
+
+            <CheckBox
+                android:id="@+id/vitian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I am from VIT"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:buttonTint="@color/purplePrimary"/>
+
+
+
+            <EditText
+                android:id="@+id/university"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableEnd="@drawable/ic_university_24dp"
+                android:hint="UNIVERSITY"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins"
+                android:layout_marginBottom="10dp"
+                android:paddingStart="20dp"
+                android:textColor="@color/black"
+                android:paddingEnd="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textSize="14sp"
+                android:inputType="text"/>
+
+            <LinearLayout
+                android:id="@+id/vitian_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:visibility="gone"
+                android:orientation="vertical"
+                >
+
+                <EditText
+                    android:id="@+id/reg_number"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/poppins"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:textAllCaps="true"
+                    android:background="@drawable/edit_text_background"
+                    android:drawableEnd="@drawable/ic_registration_number_24dp"
+                    android:hint="REGISTRATION NO."
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:textColor="@color/black"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="14sp"
+                    android:inputType="text"/>
+
+                <EditText
+                    android:id="@+id/room_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/poppins"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/edit_text_background"
+                    android:drawableEnd="@drawable/ic_location_on_black_24dp"
+                    android:hint="ROOM NUMBER"
+                    android:textSize="14sp"
+                    android:inputType="text"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/signup_progress_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminateTint="@color/purplePrimary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Creating User..."
+                    android:textColor="@color/purplePrimary"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+        <ImageButton
+            android:id="@+id/sign_up_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_chevron_right_black_24dp"
+            android:background="@drawable/forward_button_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="20dp"
+            android:tint="@color/white"
+            />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
