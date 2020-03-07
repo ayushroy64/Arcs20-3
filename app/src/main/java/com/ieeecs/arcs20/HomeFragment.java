@@ -1,10 +1,12 @@
 package com.ieeecs.arcs20;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -61,11 +63,13 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, new TimelineFragment());
+                fragmentTransaction.replace(R.id.fragment_container, new FragmentTimeLine());
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
         });
+
+
 
 
         btn_convoke.setOnClickListener(new View.OnClickListener() {
@@ -87,6 +91,17 @@ public class HomeFragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
+
+       /* TextView tv=v.findViewById(R.id.header);
+
+        tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),FragmentLogin.class);
+                startActivity(intent);
+                getActivity().finish();
+            }
+        });*/
 
         return v;
     }

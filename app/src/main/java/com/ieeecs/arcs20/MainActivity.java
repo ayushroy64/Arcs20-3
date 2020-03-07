@@ -6,6 +6,7 @@ import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -14,7 +15,7 @@ import android.widget.ImageView;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private DrawerLayout drawer;
     private ImageView button;
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
 
         button = findViewById(R.id.drawer_button);
-        button.setImageResource(R.drawable.ic_sort);
+
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,16 +40,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
-
-
-
-
-
         if(savedInstanceState == null) {
 
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new HomeFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_Home);
+            button.setImageResource(R.drawable.ic_sort);
         }
     }
 
@@ -72,8 +69,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 button.setImageResource(R.drawable.ic_sort_white);
                 break;
             case R.id.nav_timeline:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new TimelineFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentTimeLine()).commit();
                 button.setImageResource(R.drawable.ic_sort);
                 break;
             case R.id.nav_developers:

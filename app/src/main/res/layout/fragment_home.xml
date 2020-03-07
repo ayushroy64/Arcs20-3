@@ -121,6 +121,7 @@
         android:layout_marginLeft="44dp" />
 
     <TextView
+        android:id="@+id/convoke_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="46dp"
@@ -161,25 +162,17 @@
         android:id="@+id/view3"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginStart="44dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="19dp"
         android:background="#979797"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recycler_view_convoke"
         android:layout_marginLeft="44dp" />
 
-    <View
-        android:id="@+id/view4"
-        android:layout_width="122dp"
-        android:layout_height="1dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="19dp"
-        android:background="#494949"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recycler_view_convoke"
-        android:layout_marginLeft="44dp" />
-
     <TextView
+        android:id="@+id/workshop_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="46dp"
@@ -190,7 +183,7 @@
         android:textColor="#4A4A4A"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view4"
+        app:layout_constraintTop_toBottomOf="@+id/view3"
         android:layout_marginLeft="46dp" />
 
     <ImageView
@@ -208,35 +201,28 @@
         android:id="@+id/recycler_view_workshop"
         android:layout_width="match_parent"
         android:layout_height="115dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="15dp"
         android:paddingEnd="44dp"
         android:clipToPadding="false"
         android:orientation="horizontal"
         android:paddingStart="44dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view4" />
+        app:layout_constraintTop_toBottomOf="@+id/workshop_header" />
 
     <View
         android:id="@+id/view5"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginStart="44dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="19dp"
         android:background="#979797"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recycler_view_workshop"
         android:layout_marginLeft="44dp" />
 
-    <View
-        android:id="@+id/view6"
-        android:layout_width="122dp"
-        android:layout_height="1dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="19dp"
-        android:background="#494949"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recycler_view_workshop"
-        android:layout_marginLeft="44dp" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

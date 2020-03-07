@@ -4,6 +4,11 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 
+    <color name="colorText">#E8222222</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffff</color>
+
+
     <color name="gradientConvoke">#0D0B44</color>
     <color name="gradientTimeline">#310037</color>
     <color name="gradientWorkshop">#7B203D</color>
