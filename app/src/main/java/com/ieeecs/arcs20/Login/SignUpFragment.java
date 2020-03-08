@@ -1,4 +1,4 @@
-package com.ieeecs.arcs20;
+package com.ieeecs.arcs20.Login;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -15,6 +15,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -23,6 +24,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.ieeecs.arcs20.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,7 +40,10 @@ public class SignUpFragment extends Fragment {
     CheckBox member, vitian;
     RadioGroup gender;
     Spinner tSize;
-    LinearLayout membershipDetails, vitianDetails, progressSection;
+    LinearLayout membershipDetails, vitianDetails, progressLayout;
+
+    ProgressBar progressBar;
+    TextView alertText;
 
     ArrayList<String> sizeArray;
 
@@ -70,7 +76,10 @@ public class SignUpFragment extends Fragment {
         tSize = rootView.findViewById(R.id.t_shirt_size);
         membershipDetails = rootView.findViewById(R.id.membership_details);
         vitianDetails = rootView.findViewById(R.id.vitian_details);
-        progressSection = rootView.findViewById(R.id.signup_progress_section);
+        progressLayout = rootView.findViewById(R.id.progress_layout);
+        progressBar = rootView.findViewById(R.id.progress_bar);
+        alertText = rootView.findViewById(R.id.alert_text);
+
 
         //APi Interface Initialisation
 //        apiInterface = APIClient.getClient().create(APIInterface.class);

@@ -1,4 +1,4 @@
-package com.ieeecs.arcs20;
+package com.ieeecs.arcs20.Login;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -14,6 +14,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
+import com.ieeecs.arcs20.MainActivity;
+import com.ieeecs.arcs20.R;
 
 public class LoginActivity extends AppCompatActivity {
     EditText username, password;
@@ -46,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
 
         try{
             if(loginstatus.equals("true")){
-                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 String uname = sp.getString("Username","");
                 intent.putExtra("Username","uname");
                 startActivity(intent);

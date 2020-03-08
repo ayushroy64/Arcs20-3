@@ -1,138 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
-    <TextView
-        android:id="@+id/k"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:fontFamily="@font/poppins_blackitalic"
-        android:paddingRight="4dp"
-        android:text="Timeline "
-        android:textAllCaps="false"
-        android:textColor="#494949"
-        android:textSize="50sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.136" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
-        android:layout_marginBottom="32dp"
-        android:src="@drawable/ic_logo_top_dark"
-        app:layout_constraintBottom_toTopOf="@+id/k"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="18dp"
-        android:src="@drawable/ic_logo_bottom_dark"
-        app:layout_constraintBottom_toTopOf="@+id/k"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.903"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/k"
-        app:layout_constraintVertical_bias="1.0">
+        android:layout_height="match_parent"
+        android:paddingTop="20dp"
+        android:paddingBottom="50dp"
+        android:clipToPadding="false">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:paddingTop="10dp"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:fontFamily="@font/poppins_blackitalic"
+            android:paddingRight="4dp"
+            android:text="Timeline"
+            android:textAllCaps="false"
+            android:textColor="#494949"
+            android:textSize="50sp"
+            android:textStyle="italic"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentEnd="true"/>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="32dp"
+            android:src="@drawable/arcs_logo_secondary"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="40dp"
+            app:layout_constraintVertical_bias="1.0" />
+
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_bold"
-                android:text="19th March"
-                android:textAlignment="center"
-                android:textSize="30dp"
-                android:textStyle="italic" />
+                android:paddingTop="10dp"
+                android:layout_below="@id/header"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="19th March'20"
+                    android:textAlignment="center"
+                    android:textColor="#494949"
+                    android:textSize="30dp"
+                    android:textStyle="italic" />
 
 
-            <ListView
-                android:id="@+id/timeline_list_view_one"
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent" />
+                <com.ieeecs.arcs20.NonScrollListView
+                    android:id="@+id/timeline_list_view_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="20th March'20"
+                    android:textColor="#494949"
+                    android:textAlignment="center"
+                    android:textSize="30dp"
+                    android:textStyle="italic"
+                    android:layout_marginTop="20dp"/>
+
+
+                <com.ieeecs.arcs20.NonScrollListView
+                    android:id="@+id/timeline_list_view_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="21st March'20"
+                    android:textColor="#494949"
+                    android:textAlignment="center"
+                    android:textSize="30dp"
+                    android:textStyle="italic"
+                    android:layout_marginTop="20dp"/>
+
+
+                <com.ieeecs.arcs20.NonScrollListView
+                    android:id="@+id/timeline_list_view_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"/>
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_bold"
-                android:text="20th March"
-                android:textAlignment="center"
-                android:textSize="30dp"
-                android:textStyle="italic" />
-
-
-            <ListView
-                android:id="@+id/timeline_list_view_two"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_bold"
-                android:text="21st March"
-                android:textAlignment="center"
-                android:textSize="30dp"
-                android:textStyle="italic" />
-
-
-            <ListView
-                android:id="@+id/timeline_list_view_three"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-            </LinearLayout>
-        </LinearLayout>
+        </RelativeLayout>
     </ScrollView>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

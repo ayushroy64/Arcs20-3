@@ -1,4 +1,4 @@
-package com.ieeecs.arcs20;
+package com.ieeecs.arcs20.Timeline;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,6 +9,11 @@ import android.widget.ListView;
 import androidx.fragment.app.Fragment;
 
 
+import com.ieeecs.arcs20.DayOneAdapter;
+import com.ieeecs.arcs20.NonScrollListView;
+import com.ieeecs.arcs20.R;
+import com.ieeecs.arcs20.TimelineDataModel;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +21,9 @@ public class FragmentTimeLine extends Fragment {
 
     List<TimelineDataModel> timelineList, timelineList1;
     ListView listView1, listView2, listView3;
+
+
+    NonScrollListView nonScrollListView;
 
 
     @Override
@@ -29,6 +37,7 @@ public class FragmentTimeLine extends Fragment {
         listView1 = view.findViewById(R.id.timeline_list_view_one);
         listView2 = view.findViewById(R.id.timeline_list_view_two);
         listView3 = view.findViewById(R.id.timeline_list_view_three);
+
 
         timelineList.add(new TimelineDataModel(R.drawable.ic_rectangle_purple, "12 pm", "UI/UX", "SJT301"));
         timelineList.add(new TimelineDataModel(R.drawable.ic_rectangle_purple, "1 pm", "UI", "SJT302"));
@@ -46,12 +55,6 @@ public class FragmentTimeLine extends Fragment {
         listView2.setAdapter(adapter);
         listView3.setAdapter(adapter);
 
-
-        /*
-
-        listView2.setAdapter(adapter1);
-        listView3.setAdapter(adapter1);
-        listView3.setAdapter(adapter1);*/
 
 
         return view;

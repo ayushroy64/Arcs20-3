@@ -24,63 +24,15 @@
         app:layout_constraintBottom_toBottomOf="@id/mask"
         android:scaleType="centerCrop"/>
 
-    <TextView
-        android:id="@+id/lvl"
-        android:layout_width="77dp"
-        android:layout_height="81dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="36dp"
-        android:fontFamily="@font/poppins_extrabold"
-        android:gravity="top"
-        android:text="@string/lvl"
-        android:textAppearance="@style/lvl"
-        android:textStyle="italic"
-        app:layout_constraintStart_toStartOf="@+id/nxt"
-        app:layout_constraintTop_toTopOf="@+id/nxt" />
-
-    <TextView
-        android:id="@+id/nxt"
-        android:layout_width="165dp"
-        android:layout_height="76dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:fontFamily="@font/poppins_extrabold"
-        android:foregroundGravity="top"
-        android:gravity="top"
-        android:text="@string/nxt"
-        android:textAppearance="@style/nxt"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/mask"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.158"
-        app:layout_constraintStart_toStartOf="parent"
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arcs_20_logo_main"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.225" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="69dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="112dp"
-        android:src="@drawable/ic_ieee"
-        app:layout_constraintStart_toStartOf="@+id/nxt"
-        app:layout_constraintTop_toTopOf="@+id/nxt" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="57dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="112dp"
-        android:src="@drawable/ic_cs"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/nxt" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"/>
 
     <View
         android:id="@+id/mask"
@@ -204,6 +156,7 @@
         android:background="@drawable/gradient_primary_button_bg">
 
         <TextView
+            android:id="@+id/alert_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Signing in..."
@@ -213,6 +166,7 @@
             />
 
         <ProgressBar
+            android:id="@+id/progress_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:indeterminateTint="@color/white"/>
